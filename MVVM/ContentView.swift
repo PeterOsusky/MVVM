@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var localPatientRepository = LocalPatientRepository()
+    @ObservedObject var externalPatientRepository = ExternalPatientRepository()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        // Create ViewModel instances
+        let patientListViewModelLocal = PatientListViewModel(patientRepository: localPatientRepository)
+        let patientListViewModelExternal = PatientListViewModel(patientRepository: externalPatientRepository)
+
+        // Use the ViewModel instances
+        VStack{
+            PatientListView(viewModel: patientListViewModelLocal)
+            PatientListView(viewModel: patientListViewModelExternal)
         }
-        .padding()
+
     }
 }
 

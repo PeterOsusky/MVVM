@@ -14,6 +14,12 @@
 		D08974D62AE9458000D09B81 /* MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08974D52AE9458000D09B81 /* MVVMTests.swift */; };
 		D08974E02AE9458000D09B81 /* MVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08974DF2AE9458000D09B81 /* MVVMUITests.swift */; };
 		D08974E22AE9458000D09B81 /* MVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08974E12AE9458000D09B81 /* MVVMUITestsLaunchTests.swift */; };
+		D08974EF2AE9460300D09B81 /* PatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08974EE2AE9460300D09B81 /* PatientModel.swift */; };
+		D08974F12AE9462D00D09B81 /* PatientRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08974F02AE9462D00D09B81 /* PatientRepository.swift */; };
+		D08974F32AE9464B00D09B81 /* LocalPatientRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08974F22AE9464B00D09B81 /* LocalPatientRepository.swift */; };
+		D08974F52AE9467000D09B81 /* ExternalPatientRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08974F42AE9467000D09B81 /* ExternalPatientRepository.swift */; };
+		D08974F72AE9469400D09B81 /* PatientListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08974F62AE9469400D09B81 /* PatientListViewModel.swift */; };
+		D08974F92AE946AA00D09B81 /* PatientListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08974F82AE946AA00D09B81 /* PatientListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		D08974DB2AE9458000D09B81 /* MVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08974DF2AE9458000D09B81 /* MVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMUITests.swift; sourceTree = "<group>"; };
 		D08974E12AE9458000D09B81 /* MVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D08974EE2AE9460300D09B81 /* PatientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientModel.swift; sourceTree = "<group>"; };
+		D08974F02AE9462D00D09B81 /* PatientRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientRepository.swift; sourceTree = "<group>"; };
+		D08974F22AE9464B00D09B81 /* LocalPatientRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPatientRepository.swift; sourceTree = "<group>"; };
+		D08974F42AE9467000D09B81 /* ExternalPatientRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalPatientRepository.swift; sourceTree = "<group>"; };
+		D08974F62AE9469400D09B81 /* PatientListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientListViewModel.swift; sourceTree = "<group>"; };
+		D08974F82AE946AA00D09B81 /* PatientListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +106,9 @@
 		D08974C32AE9457F00D09B81 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				D08974FC2AE9470500D09B81 /* Repositories */,
+				D08974FB2AE946F900D09B81 /* Patient */,
+				D08974FA2AE946EC00D09B81 /* PatientList */,
 				D08974C42AE9457F00D09B81 /* MVVMApp.swift */,
 				D08974C62AE9457F00D09B81 /* ContentView.swift */,
 				D08974C82AE9458000D09B81 /* Assets.xcassets */,
@@ -125,6 +140,33 @@
 				D08974E12AE9458000D09B81 /* MVVMUITestsLaunchTests.swift */,
 			);
 			path = MVVMUITests;
+			sourceTree = "<group>";
+		};
+		D08974FA2AE946EC00D09B81 /* PatientList */ = {
+			isa = PBXGroup;
+			children = (
+				D08974F82AE946AA00D09B81 /* PatientListView.swift */,
+				D08974F62AE9469400D09B81 /* PatientListViewModel.swift */,
+			);
+			path = PatientList;
+			sourceTree = "<group>";
+		};
+		D08974FB2AE946F900D09B81 /* Patient */ = {
+			isa = PBXGroup;
+			children = (
+				D08974EE2AE9460300D09B81 /* PatientModel.swift */,
+			);
+			path = Patient;
+			sourceTree = "<group>";
+		};
+		D08974FC2AE9470500D09B81 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				D08974F02AE9462D00D09B81 /* PatientRepository.swift */,
+				D08974F22AE9464B00D09B81 /* LocalPatientRepository.swift */,
+				D08974F42AE9467000D09B81 /* ExternalPatientRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +300,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D08974C72AE9457F00D09B81 /* ContentView.swift in Sources */,
+				D08974EF2AE9460300D09B81 /* PatientModel.swift in Sources */,
 				D08974C52AE9457F00D09B81 /* MVVMApp.swift in Sources */,
+				D08974F72AE9469400D09B81 /* PatientListViewModel.swift in Sources */,
+				D08974F92AE946AA00D09B81 /* PatientListView.swift in Sources */,
+				D08974F12AE9462D00D09B81 /* PatientRepository.swift in Sources */,
+				D08974F52AE9467000D09B81 /* ExternalPatientRepository.swift in Sources */,
+				D08974F32AE9464B00D09B81 /* LocalPatientRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
