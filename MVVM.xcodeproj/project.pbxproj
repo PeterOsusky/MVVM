@@ -106,9 +106,9 @@
 		D08974C32AE9457F00D09B81 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				D090CCE12AEA6FA400CC40CD /* Model */,
+				D090CCE22AEA6FAD00CC40CD /* View */,
 				D08974FC2AE9470500D09B81 /* Repositories */,
-				D08974FB2AE946F900D09B81 /* Patient */,
-				D08974FA2AE946EC00D09B81 /* PatientList */,
 				D08974C42AE9457F00D09B81 /* MVVMApp.swift */,
 				D08974C62AE9457F00D09B81 /* ContentView.swift */,
 				D08974C82AE9458000D09B81 /* Assets.xcassets */,
@@ -162,11 +162,35 @@
 		D08974FC2AE9470500D09B81 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				D090CCE32AEA6FCF00CC40CD /* Patient */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		D090CCE12AEA6FA400CC40CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D08974FB2AE946F900D09B81 /* Patient */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D090CCE22AEA6FAD00CC40CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D08974FA2AE946EC00D09B81 /* PatientList */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D090CCE32AEA6FCF00CC40CD /* Patient */ = {
+			isa = PBXGroup;
+			children = (
 				D08974F02AE9462D00D09B81 /* PatientRepository.swift */,
 				D08974F22AE9464B00D09B81 /* LocalPatientRepository.swift */,
 				D08974F42AE9467000D09B81 /* ExternalPatientRepository.swift */,
 			);
-			path = Repositories;
+			path = Patient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
